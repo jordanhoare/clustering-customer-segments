@@ -16,8 +16,9 @@ class KMeans_Prediction:
     """
     (1) Instantiate the df from the SSMS sql table
     (2) Preprocess to remove nulls and distance features
-    (3) Create a plot of intertia over k to find best suitable k value
+    (3) Create a plot of inertia over k to find best suitable k value
     (4) Use 'k' to predict clusters on train set
+    (4) Send results to ../output folder
 
     """
 
@@ -48,7 +49,7 @@ class KMeans_Prediction:
             "latitude",
             "longitude",
         ]  # remove location based features
-        features = np.setdiff1d(features, rem)
+        features = np.setdiff1d(features, rem)  # new list minus rem
 
         # After feature removals
         features_data = self.df[features]
@@ -59,7 +60,7 @@ class KMeans_Prediction:
 
     def plotting(self):
         """
-        Instantiating the model on 2-15 clusters and plotting the change in intertia(over k) to find the most suitable k
+        Instantiating the model on 2-15 clusters and plotting the change in inertia(over k) to find the most suitable k
         """
         X_train = self.df.values
         no_of_clusters = range(2, 16)
@@ -81,11 +82,11 @@ class KMeans_Prediction:
         plt.xlabel("Number of clusters")
         plt.ylabel("Inertia")
         plt.title("Inertia per K")
-        plt.savefig("output/k-intertia-plot.png")
+        plt.savefig("output/k-inertia-plot.png")
 
     def predict(self):
         """
-        Aftering reviewing the intertia plot, 5/6 clusters seem to be the most appropriate
+        Aftering reviewing the inertia plot, 5/6 clusters seem to be the most appropriate
 
         """
         # # Running K means on 6 clusters
