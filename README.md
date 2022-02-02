@@ -6,8 +6,7 @@ K-Means Clustering
 
 </br>
 
-DESCRIPTION
-
+Data from: http://ipidata.teachable.com/ 
 
 </br>
 
