@@ -2,6 +2,9 @@
 ============
 [![GitHub Stars](https://img.shields.io/github/stars/jordanhoare/kmeans-clustering.svg)](https://github.com/jordanhoare/kmeans-clustering/stargazers) [![GitHub Issues](https://img.shields.io/github/issues/jordanhoare/kmeans-clustering.svg)](https://github.com/jordanhoare/kmeans-clustering/issues) [![Current Version](https://img.shields.io/badge/version-0.5.0-green.svg)](https://github.com/jordanhoare/kmeans-clustering) 
 
+</br>
+
+A python app that utilises a clustering algorithm to identify six market segments from event survey data. The analysis utilises Sklearn’s KMeans algorithm, and is spun up with FastAPI so a web-driven form can integrate new data down the pipeline to a PowerBI dashboard [Python, JavaScript, FastAPI, SQL, PowerBI].
 
 </br>
 
