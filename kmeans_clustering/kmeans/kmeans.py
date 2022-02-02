@@ -12,32 +12,34 @@ from sklearn.cluster import KMeans
 ##########################################################
 ################ K-MEANS CLUSTERING CLASS ################
 ##########################################################
-class Cluster_Prediction:
+class KMeans_Prediction:
     """
-    (1) Instantiate the model & tokenizer
-    (2) Create_lenet
-    (3) Inference
-    (4) Predict & return list of prediction and probability
+    (1) Instantiate the df from the SSMS sql table
+    (2) Preprocess to remove nulls and distance features
+    (3) Create a plot of intertia over k to find best suitable k value
+    (4) Use 'k' to predict clusters on train set
 
     """
 
     def __init__(self):
-        self.con = podbc.connect(
+        self.df = self.sql_table_to_df()
+        self.preprocessing()
+        self.plotting()
+        self.predict()
+
+    def sql_table_to_df(self):
+        con = podbc.connect(
             "Driver={SQL Server Native Client 11.0};"
             "Server=H510I\SQLEXPRESS;"
             "Database=customers;"
             "Trusted_Connection=yes;"
         )
-
-        self.preprocessing()
-        self.train()
-        self.predict()
+        SQL_Query = pd.read_sql_query("""SELECT * FROM [dbo].[raw_data]""", con)
+        return SQL_Query
 
     def preprocessing(self):
         """ """
-        SQL_Query = pd.read_sql_query("""SELECT * FROM [dbo].[raw_data]""", self.con)
-
-        features = SQL_Query.columns.values
+        features = self.df.columns.values
         rem = [
             "id",
             "district",
@@ -49,25 +51,24 @@ class Cluster_Prediction:
         features = np.setdiff1d(features, rem)
 
         # After feature removals
-        features_data = SQL_Query[features]
+        features_data = self.df[features]
         print(f"Shape of feature-removed data: ", features_data.shape)
 
         # Encoded data shape
         self.df = pd.get_dummies(features_data, columns=features)
 
-    def train(self):
+    def plotting(self):
         """
-        (1) Instantiate the model & tokenizer
-
+        Instantiating the model on 2-15 clusters and plotting the change in intertia(over k) to find the most suitable k
         """
-        self.X_train = self.df.values
+        X_train = self.df.values
         no_of_clusters = range(2, 16)
         inertia = []  # the within-cluster sum of squares
 
         # Running K means with multible Ks
         for f in no_of_clusters:
             kmeans = KMeans(n_clusters=f, random_state=100)
-            kmeans = kmeans.fit(self.X_train)
+            kmeans = kmeans.fit(X_train)
             u = kmeans.inertia_
             inertia.append(u)
 
@@ -80,18 +81,19 @@ class Cluster_Prediction:
         plt.xlabel("Number of clusters")
         plt.ylabel("Inertia")
         plt.title("Inertia per K")
-        plt.savefig("k-intertia-plot.png")
+        plt.savefig("output/k-intertia-plot.png")
 
     def predict(self):
         """
-        (1) Instantiate the model & tokenizer
+        Aftering reviewing the intertia plot, 5/6 clusters seem to be the most appropriate
 
         """
         # # Running K means on 6 clusters
+        X_train = self.df.values
         kmeans = KMeans(n_clusters=6, random_state=2)
-        kmeans = kmeans.fit(self.X_train)
+        kmeans = kmeans.fit(X_train)
         kmeans.labels_
-        predictions = kmeans.predict(self.X_train)
+        predictions = kmeans.predict(X_train)
 
         # calculating the Counts of the cluster
         _, counts = np.unique(predictions, return_counts=True)
@@ -109,5 +111,5 @@ class Cluster_Prediction:
                 "Cluster 6",
             ],
         )
-        return_csv = countscldf.to_csv("test_predictions.csv")
+        return_csv = countscldf.to_csv("output/test_predictions.csv")
         return return_csv
