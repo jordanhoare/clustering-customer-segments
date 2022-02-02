@@ -14,14 +14,16 @@ DESCRIPTION
 ## Project Features
 - [x] instantiate the project using pyenv, poetry
 - [x] connect to SQLite with sqlalchemy object related mapping
-- [ ] automated processing (csv -> SQL -> python -> SQL -> PowerBI)
+- [ ] processing pipeline (csv -> SQL -> python -> SQL -> PowerBI)
 - [ ] embed powerbi dashboard
+- [ ] CI/CD (automate data processing)
 - [ ] host via Heroku for a live demo capability
 - [ ] update readme
 
 </br>
 
 ## Data Processing
+
 - [ ] preprocessing
 - [ ] cleaning
 - [ ] feature engineering 
