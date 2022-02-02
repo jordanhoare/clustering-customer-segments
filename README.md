@@ -4,6 +4,8 @@ K-Means Clustering
 
 ![Alt Text](https://media.giphy.com/media/aIyeExuk11gpQTzk81/giphy.gif)
 
+</br>
+
 DESCRIPTION
 
 
@@ -27,6 +29,8 @@ DESCRIPTION
 - [ ] PCA (configure no. of components)
 - [ ] retrain (adjust params accordingly)
 
+
+</br>
 
 ## Dashboarding
 - [ ] create events cluster dashboard
