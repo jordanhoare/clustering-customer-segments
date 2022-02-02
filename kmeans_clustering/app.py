@@ -34,6 +34,7 @@ templates = Jinja2Templates(
     directory="D:/CompSci/Projects/digit-drawing-prediction/digit_recognition/templates/"
 )
 
+
 # Routes
 @app.get("/")
 async def root():

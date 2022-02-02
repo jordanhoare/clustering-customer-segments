@@ -391,6 +391,31 @@ optional = false
 python-versions = ">=3.5"
 
 [[package]]
+name = "imageio"
+version = "2.14.1"
+description = "Library for reading and writing a wide range of image, video, scientific, and volumetric data formats."
+category = "main"
+optional = false
+python-versions = ">=3.5"
+
+[package.dependencies]
+numpy = "*"
+pillow = ">=8.3.2"
+
+[package.extras]
+build = ["wheel"]
+dev = ["invoke", "pytest", "pytest-cov", "black", "flake8"]
+docs = ["sphinx", "numpydoc", "pydata-sphinx-theme"]
+ffmpeg = ["imageio-ffmpeg", "psutil"]
+fits = ["astropy"]
+full = ["astropy", "black", "flake8", "gdal", "imageio-ffmpeg", "invoke", "itk", "numpydoc", "psutil", "pydata-sphinx-theme", "pytest", "pytest-cov", "sphinx", "tifffile", "wheel"]
+gdal = ["gdal"]
+itk = ["itk"]
+linting = ["black", "flake8"]
+test = ["invoke", "pytest", "pytest-cov"]
+tifffile = ["tifffile"]
+
+[[package]]
 name = "ipykernel"
 version = "6.8.0"
 description = "IPython Kernel for Jupyter"
@@ -1651,7 +1676,7 @@ notebook = ">=4.4.1"
 [metadata]
 lock-version = "1.1"
 python-versions = "~3.9"
-content-hash = "d3a7ffc7d53d65415e09db7ab1f5a5735717961af230ad26176414ad8086ca2b"
+content-hash = "13442adac36aa76390abb84a37bbd91d9e5714ce6cd71d0c73f76d728f124ed4"
 
 [metadata.files]
 anyio = [
@@ -1918,6 +1943,10 @@ huggingface-hub = [
 idna = [
     {file = "idna-3.3-py3-none-any.whl", hash = "sha256:84d9dd047ffa80596e0f246e2eab0b391788b0503584e8945f2368256d2735ff"},
     {file = "idna-3.3.tar.gz", hash = "sha256:9d643ff0a55b762d5cdb124b8eaa99c66322e2157b69160bc32796e824360e6d"},
+]
+imageio = [
+    {file = "imageio-2.14.1-py3-none-any.whl", hash = "sha256:4bc1257abe5d8c9ef89132dccd9d783c1c0bdbbcfb98c0e5fe84e8b7b9ee4975"},
+    {file = "imageio-2.14.1.tar.gz", hash = "sha256:709c18f800981e4286abe4bd86b6c9b5bb6e285b6b933b5ba0962ef8e7994058"},
 ]
 ipykernel = [
     {file = "ipykernel-6.8.0-py3-none-any.whl", hash = "sha256:6c977ead67ec22151993a5f848b97e57a5e771f979b510941e157b2e7fe54184"},
