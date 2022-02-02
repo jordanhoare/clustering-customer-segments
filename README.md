@@ -1,32 +1,27 @@
-K-Means Clustering
+[WIP] K-Means Clustering
 ============
 [![GitHub Stars](https://img.shields.io/github/stars/jordanhoare/kmeans-clustering.svg)](https://github.com/jordanhoare/kmeans-clustering/stargazers) [![GitHub Issues](https://img.shields.io/github/issues/jordanhoare/kmeans-clustering.svg)](https://github.com/jordanhoare/kmeans-clustering/issues) [![Current Version](https://img.shields.io/badge/version-0.5.0-green.svg)](https://github.com/jordanhoare/kmeans-clustering) 
 
-![Alt Text](https://media.giphy.com/media/aIyeExuk11gpQTzk81/giphy.gif)
-
-</br>
-
-Data from: http://ipidata.teachable.com/ 
 
 </br>
 
 ## Project Features
 - [x] instantiate the project using pyenv, poetry
 - [x] connect to SQLite with sqlalchemy object related mapping
-- [ ] processing pipeline (csv -> SQL -> python -> SQL -> PowerBI)
+- [x] processing pipeline (csv -> SQL -> python -> SQL -> PowerBI)
 - [ ] embed powerbi dashboard
-- [ ] CI/CD (automate data processing)
+- [ ] link a fastapi form to submit to db to store new data 
+- [ ] CI/CD (automate data submission so that dashboard batch processes)
 - [ ] host via Heroku for a live demo capability
-- [ ] update readme
 
 </br>
 
 ## Data Processing
 
-- [ ] preprocessing
-- [ ] cleaning
+- [x] preprocessing
+- [x] cleaning
 - [ ] feature engineering 
-- [ ] inital modelling using SKLearn K-Means
+- [x] inital modelling using SKLearn K-Means
 - [ ] PCA (configure no. of components)
 - [ ] retrain (adjust params accordingly)
 
