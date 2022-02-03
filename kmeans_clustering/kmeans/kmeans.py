@@ -1,6 +1,3 @@
-##########################################################
-################ Load Packages / libraries ###############
-##########################################################
 import numpy as np
 import pandas as pd
 import pypyodbc as podbc
@@ -8,10 +5,11 @@ import seaborn as sns
 from matplotlib import pyplot as plt
 from sklearn.cluster import KMeans
 
+# # # # # # IMPROVEMENTS # # # # # #
+# improve modular structure (atm, this is very linearly progress and doesn't follow any good OOP practices)
+# type commenting
 
-##########################################################
-################ K-MEANS CLUSTERING CLASS ################
-##########################################################
+
 class KMeans_Prediction:
     """
     (1) Instantiate the df from the SSMS sql table
