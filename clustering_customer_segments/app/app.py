@@ -1,13 +1,17 @@
 from typing import Dict, List
 
+import models
 from config import settings
-from database import SessionLocal
+from database import SessionLocal, engine
 from fastapi import BackgroundTasks, Depends, FastAPI, HTTPException, Request
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
 from pydantic import BaseModel
 from pydantic.main import BaseModel
 from sqlalchemy.orm import Session
+
+# Create db & table with SQLalchemy
+models.Base.metadata.create_all(bind=engine)
 
 
 # Dependency

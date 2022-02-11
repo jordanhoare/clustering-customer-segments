@@ -1,6 +1,6 @@
 [WIP] K-Means Clustering
 ============
-[![GitHub Stars](https://img.shields.io/github/stars/jordanhoare/kmeans-clustering.svg)](https://github.com/jordanhoare/kmeans-clustering/stargazers) [![GitHub Issues](https://img.shields.io/github/issues/jordanhoare/kmeans-clustering.svg)](https://github.com/jordanhoare/kmeans-clustering/issues) [![Current Version](https://img.shields.io/badge/version-0.5.0-green.svg)](https://github.com/jordanhoare/kmeans-clustering) 
+[![GitHub Stars](https://img.shields.io/github/stars/jordanhoare/clustering-customer-segments.svg)](https://github.com/jordanhoare/clustering-customer-segments/stargazers) [![GitHub Issues](https://img.shields.io/github/issues/jordanhoare/clustering-customer-segments.svg)](https://github.com/jordanhoare/clustering-customer-segments/issues) [![Current Version](https://img.shields.io/badge/version-0.5.0-green.svg)](https://github.com/jordanhoare/clustering-customer-segments) 
 
 </br>
 
