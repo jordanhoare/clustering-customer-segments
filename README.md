@@ -4,7 +4,7 @@
 
 </br>
 
-Market segments from event survey data are determined using python-based K-Means clustering, dimentionality reduction and PCA, then deployed in Power BI [Python, SQL, PowerBI].  
+Market segments from event survey data are determined using python-based K-Means clustering, dimensionality reduction and PCA, then deployed in Power BI [Python, SQL, PowerBI].  
 
 
 </br>
