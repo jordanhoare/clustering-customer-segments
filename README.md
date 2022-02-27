@@ -51,7 +51,7 @@ To demo this application: clone the repo, navigate to the project folder and run
 
 
 #### Notes
-The PowerBi design template is refactored from **Microsoft's Sales & Returns Report by Mike Carlo** - [Mike Carlo](https://github.com/MikeCarlo).  This code is for educational use only.  
+The PowerBi design template is refactored from **Microsoft's Sales & Returns Report by** [Mike Carlo](https://github.com/MikeCarlo/Msft-Skateboard-Report).  This code is for educational use only.  
 
 </br>
 
