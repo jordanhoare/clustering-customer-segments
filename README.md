@@ -4,17 +4,15 @@
 
 </br>
 
-A python app that utilises KMeans clustering to identify N market segments from event survey data. The analysis utilises Sklearn’s KMeans algorithm, and is spun up with FastAPI & MySQL so a web-driven JS form can integrate new data to the pipeline and feed to a PowerBI dashboard [Python, JavaScript, FastAPI, SQL, PowerBI].
+Market segments from event survey data are determined using python-based K-Means clustering, dimentionality reduction and PCA, then deployed in Power BI [Python, SQL, PowerBI].  
+
 
 </br>
 
 ## Project Features
 - [x] instantiate the project using pyenv, poetry
-- [x] connect to SQLite with sqlalchemy object related mapping
 - [x] processing pipeline (csv -> SQL -> python -> SQL -> PowerBI)
-- [ ] embed powerbi dashboard
-- [ ] link a fastapi form to submit to db to store new data 
-- [ ] CI/CD (automate data submission so that dashboard batch processes)
+- [ ] ...
 
 </br>
 
@@ -22,16 +20,16 @@ A python app that utilises KMeans clustering to identify N market segments from 
 
 - [x] preprocessing
 - [x] cleaning
-- [ ] feature engineering 
+- [x] feature engineering 
 - [x] inital modelling using SKLearn K-Means
 - [x] PCA (configure no. of components)
-- [ ] retrain (adjust params accordingly)
+- [x] retrain (adjust params accordingly)
 
 
 </br>
 
 ## Dashboarding
-- [ ] create events cluster dashboard
+- [x] create events cluster dashboard
 - [ ] analyse & summarise traits of each cluster
 - [ ] interactive NPS analytics 
 - [ ] breakdown tree 
