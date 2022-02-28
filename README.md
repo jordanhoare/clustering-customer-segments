@@ -51,7 +51,7 @@ To demo this application: clone the repo, navigate to the project folder and run
 
 
 #### Citations
-The PowerBi background template is pulled from **Microsoft's Sales & Returns Report by [powerbi.tips](https://powerbi.tips/product/scrims-msft-skateboard-report-free/).**
+The PowerBi scrim is pulled from **Microsoft's Sales & Returns Report by [powerbi.tips](https://powerbi.tips/product/scrims-msft-skateboard-report-free/).**
 
 </br>
 
