@@ -6,7 +6,7 @@ K-Means Clustering
 
 Market segments from event survey data are determined using python-based K-Means clustering, dimensionality reduction and PCA, then deployed in Power BI [Python, SQL, PowerBI].  
 
-![alt text](https://github.com/jordanhoare/clustering-customer-segments/tree/main/clustering_customer_segments/pbix/dashboard1.png?raw=true)
+![Alt text](clustering-customer-segments/tree/main/clustering_customer_segments/pbix/dashboard1.png)
 
 </br>
 
