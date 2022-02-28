@@ -1,4 +1,4 @@
-[WIP] K-Means Clustering
+K-Means Clustering
 ============
 [![GitHub Stars](https://img.shields.io/github/stars/jordanhoare/clustering-customer-segments.svg)](https://github.com/jordanhoare/clustering-customer-segments/stargazers) [![GitHub Issues](https://img.shields.io/github/issues/jordanhoare/clustering-customer-segments.svg)](https://github.com/jordanhoare/clustering-customer-segments/issues) [![Current Version](https://img.shields.io/badge/version-0.5.0-green.svg)](https://github.com/jordanhoare/clustering-customer-segments) 
 
